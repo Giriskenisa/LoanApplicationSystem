@@ -1,0 +1,41 @@
+server:
+  port: 8589
+spring:
+  data:
+    mongodb:
+      database: loan-application
+      uri: mongodb://localhost:27017
+  application:
+    name: loan-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: finance
+    password: finance
+  liquibase:
+    changelog: classpath:/db/db.changelog-master.xml
+    enabled: true
+
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+finance:
+  rabbit:
+    queue:
+      name: finance-queue
+    exchange:
+      name: finance-exchange
+    routing:
+      name: finance-routing

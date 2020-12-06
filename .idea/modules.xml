@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CreditApplicationSystem.iml" filepath="$PROJECT_DIR$/.idea/CreditApplicationSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loan-application-service/loan-application-service.iml" filepath="$PROJECT_DIR$/loan-application-service/loan-application-service.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,25 @@
+<div>
+    <form>
+        <div class="alert alert-danger" *ngIf="error" role="alert">
+            {{message}}
+           </div>
+
+           <div class="alert alert-success " *ngIf="success" role="alert">
+             {{response.message}}
+           </div>
+           <h2 style="text-align: center;">Kredi Sorgulama Sistemi</h2>
+        <div class="form-group">
+                <input type="text" placeholder="İsim" class="form-control" id="name" name="name" [(ngModel)]="loan.name" required="required" >
+            <input type="text" placeholder="Soyisim" class="form-control" id="lastName" name="lastName" [(ngModel)]="loan.lastName" >
+            <input type="text" placeholder="TC Kimlik Numarası" maxlength="11" class="form-control" id="tcNo" name="tcNo" [(ngModel)]="loan.tckn">
+            <input type="tel" placeholder="İletişim Numarası" maxlength="10" class="form-control" id="telNo" name="telNo" [(ngModel)]="loan.phone" aria-describedby="telHelp">
+             <small id="telHelp" class="form-text text-muted">5554443322 Formatında Giriniz</small>
+             <input type="number" placeholder="Aylık Gelir"  class="form-control" id="tcNo" name="tcNo" [(ngModel)]="loan.monthlyIncome">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="check" name="check" [(ngModel)]="check">
+            <label class="form-check-label" for="check">KVKK Sözleşmesini Okudum-Kabul Ediyorum</label>
+          </div>
+          <button type="submit" class="btn btn-primary" (click)="sendRequest()">Kredi Sorgula</button>
+  </form>
+</div>

@@ -1,0 +1,33 @@
+server:
+  port: 8191
+spring:
+  application:
+    name: notification-service
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: finance
+    password: finance
+eureka:
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    instance:
+      hostname: localhost
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+finance:
+  rabbit:
+    queue:
+      name: finance-queue
+    exchange:
+      name: finance-exchange
+    routing:
+      name: finance-routing
