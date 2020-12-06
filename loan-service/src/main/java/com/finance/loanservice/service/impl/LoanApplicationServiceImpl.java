@@ -21,7 +21,7 @@ public class LoanApplicationServiceImpl implements LoanApplicationService {
 
     private final LoanApplicationRepository loanApplicationRepository;
     private final NotificationProducer notificationService;
-    private final MockCreditScoreService mockCreditScoreService; //singleton design pattern runtime boyunca tek instance çalışır ve değiştirilemez.(final)
+    private final MockCreditScoreService mockCreditScoreService;
 
     @Override
     @Transactional
